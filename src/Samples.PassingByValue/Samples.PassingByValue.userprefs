@@ -1,0 +1,13 @@
+﻿<Properties StartupConfiguration="{20BE170C-58C0-4050-8771-8FF5DE3F43E7}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Samples.PassingByValue\Program.cs">
+    <Files>
+      <File FileName="Samples.PassingByValue\Program.cs" Line="33" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Samples.PassingByValue PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
