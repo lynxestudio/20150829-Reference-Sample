@@ -43,41 +43,43 @@ Este programa intercambia el valor de unos enteros en donde se inicialmente se l
 	  Swap(ref a, ref b);
 	  </pre>
  <h2>Utilizando params</h2>
-	  <p>En los ejemplos anteriores el número de parámetros está fijo en la declaración del método. 
-	  Sin embargo, C# soporta el uso de un arreglo de parámetros (parameters array), la palabra reservada <strong>params</strong>  permite pasar cualquier número variable de parámetros hacia un método sin necesidad de declararlos como un arreglo. Esta instrucción solo se requiere en la declaración del método. 
-	  Con el siguiente programa muestro el uso de params  para calcular el promedio de un arreglo de números y para armar una cadena.</p>
-	  <p>Este programa produce la siguiente salida.</p>
-	  <div>
-	  <a href="http://viid.me/qwCI7Y" target="_blank">
-	  <IMG src="picture_library/passing/fig3.png">
-	  </a>
-	  </div><br>
+ <p>En los ejemplos anteriores el número de parámetros está fijo en la declaración del método. 
+ Sin embargo, C# soporta el uso de un arreglo de parámetros (parameters array), la palabra reservada <strong>params</strong>  permite pasar cualquier número variable de parámetros hacia un método sin necesidad de declararlos como un arreglo. Esta instrucción solo se requiere en la declaración del método. 
+ Con el siguiente programa muestro el uso de params  para calcular el promedio de un arreglo de números y para armar una cadena.</p>
+ <p>Este programa produce la siguiente salida.</p>
+ <div>
+ <IMG src="picture_library/passing/fig3.png">
+ </div><br>
  <h2>Utilizando output parameters</h2>
-	  <p align="justify">Un método de forma predeterminada solo puede devolver un valor mediante la instrucción <strong>return</strong>, al menos que se utilicen los output parameters (parámetros de salida), con esta característica pueden devolver tantos valores de salida como parámetros de salida tengan, no es necesario asignar valores a esos parámetros afuera del método sino se debe asignar el valor dentro del método que los va a utilizar o de lo contrario el compilador marcara un error. </p>
-	  <p>Para utilizar los output parameters se debe anteponer la palabra reservada: <strong>out</strong> en la declaración de cada parámetro:
+<p align="justify">
+Un método de forma predeterminada solo puede devolver un valor mediante la instrucción <strong>return</strong>, al menos que se utilicen los output parameters (parámetros de salida), con esta característica pueden devolver tantos valores de salida como parámetros de salida tengan, no es necesario asignar valores a esos parámetros afuera del método sino se debe asignar el valor dentro del método que los va a utilizar o de lo contrario el compilador marcara un error. 
 </p>
-	  <pre>
+ <p>
+Para utilizar los output parameters se debe anteponer la palabra reservada: <strong>out</strong> en la declaración de cada parámetro:
+</p>
+<pre>
 	  
 	  static void SetEnviromentProperties(out string currentDirectory,
 		  out string machineName,
 		  out string osVersion,
 		  out string userName,
 		  out int exitCode)
-	  </pre>
-	  <p>Bien con el siguiente programa mostraré el uso de esta característica.</p>
-	  <p>Al ejecutar el programa, se vera la siguiente salida:</p>
-	  <div>
-	  <IMG src="picture_library/passing/fig4.png">
-	  </div><br>
-	  <p>Al ejecutarse el método <i>SetEnviromentProperties</i> sus correspondientes argumentos también deben tener la palabra reservada <b>out</b>, para que dentro del método se les asigne el valor correspondiente.</p>
-	  <pre>
-	  
-	  static void SetEnviromentProperties(out string currentDirectory,
+ </pre>
+ <p>Bien con el siguiente programa mostraré el uso de esta característica.</p>
+ <p>Al ejecutar el programa, se vera la siguiente salida:</p>
+ <div>
+ <IMG src="picture_library/passing/fig4.png">
+ </div><br>
+ <p>
+Al ejecutarse el método <i>SetEnviromentProperties</i> sus correspondientes argumentos también deben tener la palabra reservada <b>out</b>, para que dentro del método se les asigne el valor correspondiente.
+</p>
+ <pre>
+ static void SetEnviromentProperties(out string currentDirectory,
 		  out string machineName,
 		  out string osVersion,
 		  out string userName,
 		  out int exitCode)
-	  
-	  </pre>
-<p>Finalmente hay que recordar que un método que define output parameters DEBE asignar un valor a los parámetros <strong>out</strong> antes de que el método termine de ejecutarse, de lo contrario el compilador marcara un error.</p>
-	  <p>
+ </pre>
+<p>
+Finalmente hay que recordar que un método que define output parameters DEBE asignar un valor a los parámetros <strong>out</strong> antes de que el método termine de ejecutarse, de lo contrario el compilador marcara un error.</p>
+<p>
